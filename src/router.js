@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
-
+import Foo from './views/city/Citys'
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
@@ -52,8 +52,11 @@ export default new Router({
             name: 'filmId',
             component: () =>
                 import ('./views/Qall')
+        },
+        {
+            path: "/home/foo",
+            name: "foo",
+            component: Foo
         }
-
-
     ]
 })

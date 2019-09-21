@@ -5,7 +5,7 @@
       <img :src="ban.url" alt="">
   </van-swipe-item>
 </van-swipe>
-<button class="city" @click='aLinks'>按钮</button>
+<button class="city" @click='aLinks'>{{anniu}}</button>
     </div>
 </template>
 <script>
@@ -15,7 +15,8 @@ export default {
     name:"banner",
     data() {
         return {
-            banner:[]
+            banner:[],
+            anniu:"深圳"
         }
     },
    components:{
@@ -23,7 +24,8 @@ export default {
         [SwipeItem.name]:SwipeItem 
     },
     created() {
-       this.getH();
+       this.getH()
+       this.anniu=localStorage.getItem('key')
     },
     methods:{
         getH(){
@@ -34,7 +36,7 @@ export default {
         },
         //按钮跳转
         aLinks(){
-          this.$router.push('/my');
+          this.$router.push('foo');
         }
     }
 }
