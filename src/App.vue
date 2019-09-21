@@ -11,7 +11,6 @@ export default {
   name:'app',
   components:{
     "nav-bar":Foot
-   
   }
 }
 </script>
