@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-  <app-banner></app-banner>
-  <app-nav></app-nav>
   <router-view></router-view>
+  <nav-bar></nav-bar>
   </div>
 </template>
 <script>
-import Banner from './components/header/Banner'
-import Menu from './components/Menu'
-
+import Foot from './components/footer/Footer'
 
 export default {
   name:'app',
   components:{
-    "app-banner":Banner,
-    "app-nav":Menu
+    "nav-bar":Foot
+   
   }
 }
 </script>
 <style lang="less" scoped>
+#app{
+  padding-bottom: 30px;
+}
 
 </style>
